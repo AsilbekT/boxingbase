@@ -28,9 +28,9 @@ SECRET_KEY = 'django-insecure-w)k5f*h9d@!v3()&f65rftfs$il+xsha55_y9x(n-cg232!4)d
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ["*"]
+ALLOWED_HOSTS = ["boxingbase.uz", "127.0.0.1:8000"]
 
-
+CSRF_COOKIE_SECURE=True
 # Application definition
 
 INSTALLED_APPS = [
