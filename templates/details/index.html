@@ -23,7 +23,7 @@
           <a href="{% url 'main_page' %}">
             <i class="hero__lang--self far fa-chevron-left"></i>
           </a>
-          <a class="hero__edit--btn" href="http://127.0.0.1:8000/admin/boxing_app/boxer/{{boxer.id}}/change/">
+          <a class="hero__edit--btn" href="https://boxingbase.uz/admin/boxing_app/boxer/{{boxer.id}}/change/">
             edit
           </a>
         </div>
@@ -48,7 +48,7 @@
         </div>
         <div class="hero__box">
           <div class="hero__img">
-            <img src="http://127.0.0.1:8000/{{ boxer.boxer_rasmi }}" alt="" />
+            <img src="/{{ boxer.boxer_rasmi }}" alt="" />
           </div>
           <div class="hero__contents">
             
@@ -114,7 +114,7 @@
                   {% translate "viloyat" %}: <span class="hero__detail">{{ boxer.viloyat }}</span>
                 </li>
               </ul>
-              <a href="http://127.0.0.1:8000/{{ boxer.passport_pdf }}" class="hero__btn" target="_blank">
+              <a href="/{{ boxer.passport_pdf }}" class="hero__btn" target="_blank">
                 <span>{% translate "passport_nusxasi" %}</span>
               </a>
             </div>
@@ -123,6 +123,6 @@
       </div>
     </div>
 
-    <script src="{% static 'details/' %}js/bootstrap.min.js"></script>
+    <script src="{% static 'details/js/bootstrap.min.js' %}"></script>
   </body>
 </html>

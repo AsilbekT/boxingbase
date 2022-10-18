@@ -1,0 +1,153 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Roboto", sans-serif;
+  background: #e5ebf2;
+}
+
+header {
+  background: linear-gradient(15deg, #303395, #2781f0);
+  display: grid;
+  grid-template-columns: auto 450px;
+  grid-gap: 15px;
+  align-items: center;
+}
+header nav .navParent {
+  position: relative;
+  display: inline-block;
+}
+header nav .navParent a {
+  text-decoration: none;
+  color: #fff;
+  padding: 15px;
+  display: inline-block;
+  text-align: center;
+}
+header nav .navParent a .icon {
+  font-size: 24px;
+  margin-bottom: 5px;
+  min-width: 120px;
+  display: block;
+}
+header nav .navParent .navChild {
+  background: #303395;
+  display: none;
+  min-width: 160px;
+  z-index: 99;
+}
+header nav .navParent .navChild a {
+  text-decoration: none;
+  color: #fff;
+  padding: 15px;
+  display: block;
+  border: none;
+}
+header nav .navParent .navChild a:hover {
+  background: #2f399c;
+}
+header nav .navParent:hover .navChild {
+  display: block !important;
+  position: absolute;
+}
+header nav .navParent:hover {
+  background: #2b5ec7;
+}
+
+.searchBox {
+  background: #fff;
+  padding: 2rem;
+  border: solid 1px #c3c9d8;
+  border-radius: 15px;
+  display: block;
+  margin: 20px auto;
+  width: 80%;
+}
+.searchBox .searchContainer {
+  display: grid;
+  grid-template-columns: auto 200px;
+  grid-gap: 15px;
+  margin: 0 0.75rem;
+}
+.searchBox .filtersContainer {
+  position: relative;
+  background: #dddddd;
+  color: #333;
+  padding: 0.75rem;
+  margin-top: 20px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 15px;
+  align-items: center;
+  border-radius: 15px;
+}
+.searchBox .filtersContainer::before {
+  content: "";
+  position: absolute;
+  border-width: 15px;
+  border-style: solid;
+  border-color: transparent;
+  top: 0;
+  right: 90px;
+  /* border-right-color: #dddddd; */
+  border-bottom-color: #dddddd;
+  transform: translateY(-100%);
+}
+
+.resultsContainer {
+  background: #fff;
+  padding: 2rem;
+  border-radius: 15px;
+  border: solid 1px #c3c9d8;
+  display: block;
+  margin: 20px auto;
+  width: 90%;
+}
+
+.form-control {
+  border-radius: 15px;
+}
+
+/* ==================
+        COLORS
+  ==================== */
+/* ====================
+      TABLES Global 
+  ======================= */
+.table-urm .thead-urm tr {
+  border: solid 2px #e2e6e9;
+}
+.table-urm .thead-urm tr th {
+  color: #152936;
+  background: #f5f7fa;
+  vertical-align: middle;
+  border: none;
+}
+.table-urm .tbody-urm tr {
+  border: solid 2px #edeff1;
+}
+.table-urm .tbody-urm tr td {
+  vertical-align: middle;
+}
+
+.pagination-urm {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 15px;
+  align-items: center;
+  border: solid 1px #edeff1;
+  padding: 0.75rem;
+}
+.pagination-urm .pagesControls {
+  text-align: right;
+}
+
+/* ============================
+      TEXT MANIPULATIONS GLOBAL
+  ===============================*/
+.truncate {
+  display: block;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  width: inherit;
+}
