@@ -1,0 +1,256 @@
+{% load static %}
+{% load i18n %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{% translate "boxing_federation_app" %}</title>
+
+  <!-- Google Font: Source Sans Pro -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="{% static "" %}plugins/fontawesome-free/css/all.min.css">
+  <!-- DataTables -->
+  <link rel="stylesheet" href="{% static "" %}plugins/datatables-bs4/css/dataTables.bootstrap4.min.css">
+  <link rel="stylesheet" href="{% static "" %}plugins/datatables-responsive/css/responsive.bootstrap4.min.css">
+  <link rel="stylesheet" href="{% static "" %}plugins/datatables-buttons/css/buttons.bootstrap4.min.css">
+  <!-- Select2 -->
+  <link rel="stylesheet" href="{% static 'plugins/select2/css/select2.min.css' %}">
+  <!-- Theme style -->
+  <!-- Theme style -->
+  <link rel="stylesheet" href="{% static "" %}dist/css/adminlte.min.css">
+  <link rel="stylesheet" href="{% static "" %}dist/css/our_home.css">
+</head>
+<body class="hold-transition sidebar-mini">
+<div class="wrapper">
+  <!-- Navbar -->
+  
+  <!-- /.navbar -->
+
+  <!-- Main Sidebar Container -->
+  <aside class="main-sidebar sidebar-dark-primary elevation-4">
+    <!-- Sidebar -->
+    <div class="sidebar">
+      <!-- SidebarSearch Form -->
+      <div class="form-inline">
+        <div class="input-group input__group--self" data-widget="sidebar-search">
+          <input class="form-control form-control-sidebar" type="search" placeholder="Search" aria-label="Search">
+          <div class="input-group-append">
+            <button class="btn btn-sidebar">
+              <i class="fas fa-search fa-fw"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Sidebar Menu -->
+      <nav class="mt-2">
+        <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
+          <!-- Add icons to the links using the .nav-icon class
+               with font-awesome or any other icon font library -->
+          <li class="nav-item menu-open">
+            <a href="#" class="nav-link active">
+              <i class="nav-icon fas fa-tachometer-alt"></i>
+              <p>
+                {% translate "Dashboard" %}
+                <i class="right fas fa-angle-left"></i>
+              </p>
+            </a>
+            <ul class="nav nav-treeview">
+              <li class="nav-item">
+                <a href="{% url 'main_page' %}" class="nav-link active">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>{% translate "main_info_page" %}</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="http://127.0.0.1:8000/admin/boxing_app/boxer/add/" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>{% translate "yangi_bokschi_qoshish" %}</p>
+                </a>
+              </li>
+              {% comment %} <li class="nav-item">
+                <a href="{% url 'main_page' %}" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>{% translate "bokschilar_ni_taxrirlash" %}</p>
+                </a>
+              </li> {% endcomment %}
+            </ul>
+          </li>
+          
+         
+          
+        </ul>
+      </nav>
+      <!-- /.sidebar-menu -->
+    </div>
+    <!-- /.sidebar -->
+  </aside>
+
+  <!-- Content Wrapper. Contains page content -->
+  <div class="content-wrapper">
+
+    <!-- Main content -->
+    <section class="content">
+      <div class="container-fluid" style="padding:40px 0;">
+        <div class="content__hero--box">
+          <h2 class="text-center display-4 content__hero">{% translate "bokschilarni_qidirish" %}</h2>
+          <div class="content__hero--lang">
+            <form class="hero__lang--form" action="{% url 'change_lang' %}" method="post">
+              {% csrf_token %}
+              <input name="next" type="hidden" value="{{ request.get_full_path}}" />
+                  {% get_current_language as LANGUAGE_CODE %}
+                  {% get_available_languages as LANGUAGES %}
+                  {% get_language_info_list for LANGUAGES as languages %}
+                  {% for language in languages %}
+                          <button type="submit"
+                                  name="language"
+                                  value="{{ language.code }}"
+                                  class="{% if language.code == LANGUAGE_CODE %}selected{% endif %} hero__lang--self">
+                              {{ language.code }}
+                          </button>
+                  {% endfor %}
+              </ul>
+            </form>
+          </div>
+        </div>
+            <form action="{% url "main_page" %}" method="post">
+              {% csrf_token %}
+                <div class="row">
+                    <div class="col-md-10 offset-md-1">
+                        <div class="row">
+                            <div class="col-6">
+                                <div class="form-group">
+                                    <label>{% translate "regions" %}:</label>
+                                    <select class="select2" multiple="multiple" name="regions" style="width: 100%;">
+                                      {% for region in regions %}  
+                                        <option>{{ region.viloyat_nomi_uz }}</option>
+                                      {% endfor %}
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-3">
+                                <div class="form-group">
+                                    <label>{% translate "champion_unvoni" %}:</label>
+                                    <select class="select2" name="chempion_type" style="width: 100%;">
+                                      <option disabled selected value>{% translate "tanlov" %}</option>
+                                      {% for i in chempion_type %}  
+                                        <option >{{ i.type_uz }}</option>
+                                      {% endfor %}
+                                    </select>
+                                </div>
+                            </div>
+                              <button type="submit" class="submit__btn--search">
+                                  <i class="fa fa-search"></i>
+                              </button>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        <div class="row">
+          <div class="col-12">
+            
+            <!-- /.card -->
+
+            <div class="card">
+              <div class="card-header">
+                <h3 class="card-title">{% translate "malumotlar" %}</h3>
+              </div>
+              <!-- /.card-header -->
+              <div class="card-body">
+                <table id="example1" class="table table-bordered table-striped">
+                  <thead>
+                  <tr>
+                    <th>{% translate "fio" %}</th>
+                    <th>{% translate "nomeri" %}</th>
+                  </tr>
+                  </thead>
+                  <tbody>
+                    {% for boxer in boxers %}
+                      <tr>
+                        <td><a href="{% url 'boxers_details' id=boxer.id %}">{{ boxer.fio }} </a></td>
+                        <td>{{ boxer.nomeri }}
+                        </td>
+                      </tr>
+                    {% endfor %}
+                  </tbody>
+                  <tfoot>
+                      <tr>
+                        <th>{% translate "fio" %}</th>
+                        <th>{% translate "nomeri" %}</th>
+                      </tr>
+                  </tfoot>
+                </table>
+              </div>
+              <!-- /.card-body -->
+            </div>
+            <!-- /.card -->
+          </div>
+          <!-- /.col -->
+        </div>
+        <!-- /.row -->
+      </div>
+      <!-- /.container-fluid -->
+    </section>
+    <!-- /.content -->
+  </div>
+  <!-- /.content-wrapper -->
+ 
+
+  
+
+  <!-- Control Sidebar -->
+  <aside class="control-sidebar control-sidebar-dark">
+    <!-- Control sidebar content goes here -->
+  </aside>
+  <!-- /.control-sidebar -->
+</div>
+<!-- ./wrapper -->
+
+<!-- jQuery -->
+<script src="{% static "" %}plugins/jquery/jquery.min.js"></script>
+<!-- Bootstrap 4 -->
+<script src="{% static "" %}plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+<!-- DataTables  & Plugins -->
+<script src="{% static "" %}plugins/datatables/jquery.dataTables.min.js"></script>
+<script src="{% static "" %}plugins/datatables-bs4/js/dataTables.bootstrap4.min.js"></script>
+<script src="{% static "" %}plugins/datatables-responsive/js/dataTables.responsive.min.js"></script>
+<script src="{% static "" %}plugins/datatables-responsive/js/responsive.bootstrap4.min.js"></script>
+<script src="{% static "" %}plugins/datatables-buttons/js/dataTables.buttons.min.js"></script>
+<script src="{% static "" %}plugins/datatables-buttons/js/buttons.bootstrap4.min.js"></script>
+<script src="{% static "" %}plugins/jszip/jszip.min.js"></script>
+<script src="{% static "" %}plugins/pdfmake/pdfmake.min.js"></script>
+<script src="{% static "" %}plugins/pdfmake/vfs_fonts.js"></script>
+<script src="{% static "" %}plugins/datatables-buttons/js/buttons.html5.min.js"></script>
+<script src="{% static "" %}plugins/datatables-buttons/js/buttons.print.min.js"></script>
+<script src="{% static "" %}plugins/datatables-buttons/js/buttons.colVis.min.js"></script>
+<!-- AdminLTE App -->
+<script src="{% static "" %}dist/js/adminlte.min.js"></script>
+<!-- AdminLTE for demo purposes -->
+<script src="{% static "" %}dist/js/demo.js"></script>
+<script src="{% static '' %}plugins/select2/js/select2.full.min.js"></script>
+<script>
+  $(function () {
+    $('.select2').select2()
+  });
+</script>
+<script>
+  $(function () {
+    $("#example1").DataTable({
+      "responsive": true, "lengthChange": false, "autoWidth": false,
+      "buttons": ["copy", "csv", "excel", "pdf", "print", "colvis"]
+    }).buttons().container().appendTo('#example1_wrapper .col-md-6:eq(0)');
+    $('#example2').DataTable({
+      "paging": true,
+      "lengthChange": false,
+      "searching": false,
+      "ordering": true,
+      "info": true,
+      "autoWidth": false,
+      "responsive": true,
+    });
+  });
+</script>
+</body>
+</html>

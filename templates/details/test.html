@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="css/test.css" />
+  </head>
+  <body>
+    <header>
+      <nav>
+        <div class="navParent">
+          <a href="#">
+            <span class="icon">
+              <i class="fas fa-home"></i>
+            </span>
+            Home
+          </a>
+        </div>
+
+        <div class="navParent">
+          <a href="#">
+            <span class="icon">
+              <i class="fas fa-building"></i>
+            </span>
+            Administration
+          </a>
+
+          <div class="navChild">
+            <a href="#"> Company </a>
+            <a href="#"> Users </a>
+          </div>
+        </div>
+
+        <div class="navParent">
+          <a href="#">
+            <span class="icon">
+              <i class="fas fa-books"></i>
+            </span>
+            Daybook
+          </a>
+        </div>
+
+        <div class="navParent">
+          <a href="#">
+            <span class="icon">
+              <i class="fas fa-box-ballot"></i>
+            </span>
+            Scan
+          </a>
+        </div>
+
+        <div class="navParent">
+          <a href="#">
+            <span class="icon">
+              <i class="far fa-analytics"></i>
+            </span>
+            Reports
+          </a>
+
+          <div class="navChild">
+            <a href="#"> Companies </a>
+            <a href="#"> Users </a>
+            <a href="#"> Invoices </a>
+          </div>
+        </div>
+
+        <div class="navParent">
+          <a href="#">
+            <span class="icon">
+              <i class="fas fa-archive"></i>
+            </span>
+            Archive
+          </a>
+        </div>
+
+        <div class="navParent">
+          <a href="#">
+            <span class="icon">
+              <i class="fas fa-mail-bulk"></i>
+            </span>
+            Webmail
+          </a>
+        </div>
+      </nav>
+      <div class="top-sidebar"></div>
+    </header>
+
+    <main>
+      <div class="searchBox">
+        SEARCH BOX
+
+        <div class="searchContainer">
+          <div class="input-group">
+            <input type="text" class="form-control" />
+            <div class="input-group-append">
+              <div class="input-group-btn">
+                <button class="btn btn-default" onclick="getResults()">
+                  <i class="far fa-search fa-lg"></i>
+                  Search
+                </button>
+              </div>
+            </div>
+          </div>
+          <button class="btn btn-default" onclick="toggleFilters()">
+            Advanced search
+          </button>
+        </div>
+
+        <div class="filtersContainer" id="FiltersBox">
+          <div class="form-group">
+            <label>
+              <i class="fas fa-folder"></i>
+              Category:
+            </label>
+            <select class="form-control">
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label>
+              <i class="far fa-folder"></i>
+              Sub-category:
+            </label>
+            <select class="form-control">
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label>
+              <i class="fas fa-file"></i>
+              Type:
+            </label>
+            <select class="form-control">
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label>
+              <i class="fas fa-hashtag"></i>
+              Number:
+            </label>
+            <input type="text" class="form-control" />
+          </div>
+
+          <div class="form-group">
+            <label>
+              <i class="fas fa-user-tag"></i>
+              Customer:
+            </label>
+            <input type="text" class="form-control" />
+          </div>
+
+          <div class="form-group">
+            <label>
+              <i class="fas fa-calendar-alt"></i>
+              Date from:
+            </label>
+            <input type="date" class="form-control" />
+          </div>
+
+          <div class="form-group">
+            <label>
+              <i class="fas fa-calendar-alt"></i>
+              Date to:
+            </label>
+            <input type="date" class="form-control" />
+          </div>
+
+          <div class="form-group">
+            <label>
+              <i class="fas fa-sitemap"></i>
+              Organisation:
+            </label>
+            <select class="form-control">
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label>
+              <i class="far fa-shield"></i>
+              Confidentiality:
+            </label>
+            <select class="form-control">
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+            </select>
+          </div>
+        </div>
+      </div>
+
+      <div class="resultsContainer">
+        <table class="table table-urm">
+          <thead class="thead-urm">
+            <tr>
+              <th>#</th>
+              <th>Name</th>
+              <th>Code</th>
+              <th>Thumbnail</th>
+            </tr>
+          </thead>
+          <tbody class="tbody-urm">
+            <tr>
+              <td>1</td>
+              <td>AA</td>
+              <td>001</td>
+              <td>Thumbnail</td>
+            </tr>
+            <tr>
+              <td>2</td>
+              <td>AB</td>
+              <td>002</td>
+              <td>Thumbnail</td>
+            </tr>
+            <tr>
+              <td>3</td>
+              <td>AC</td>
+              <td>003</td>
+              <td>Thumbnail</td>
+            </tr>
+            <tr>
+              <td>4</td>
+              <td>AD</td>
+              <td>004</td>
+              <td>Thumbnail</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <div class="pagination-urm">
+          <div class="recordsPerPage">
+            <select class="">
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+            </select>
+          </div>
+          <div class="pagesControls">
+            <i class="far fa-chevron-left fa-lg"></i>
+            <i class="far fa-chevron-right fa-lg"></i>
+          </div>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>

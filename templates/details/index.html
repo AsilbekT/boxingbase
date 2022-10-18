@@ -1,0 +1,128 @@
+{% load static %}
+{% load i18n %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <!-- bootstrap -->
+    <link rel="stylesheet" href="{% static 'details/css/bootstrap.min.css' %}" />
+    <!-- font-awesome -->
+    <link rel="stylesheet" href="{% static 'details/css/font-awesome.css' %}" />
+    <!-- main css -->
+    <link rel="stylesheet" href="{% static 'details/css/main.css' %}" />
+  </head>
+  <body>
+
+    <div class="hero__self">
+      <div class="container">
+        <div class="hero__lang">
+          <div class="hero__previous">
+          <a href="{% url 'main_page' %}">
+            <i class="hero__lang--self far fa-chevron-left"></i>
+          </a>
+          <a class="hero__edit--btn" href="http://127.0.0.1:8000/admin/boxing_app/boxer/{{boxer.id}}/change/">
+            edit
+          </a>
+        </div>
+          <div class="hero__lang--boxes">
+            <form class="hero__lang--form" action="{% url 'change_lang' %}" method="post">
+              {% csrf_token %}
+              <input name="next" type="hidden" value="{{ request.get_full_path}}" />
+                  {% get_current_language as LANGUAGE_CODE %}
+                  {% get_available_languages as LANGUAGES %}
+                  {% get_language_info_list for LANGUAGES as languages %}
+                  {% for language in languages %}
+                          <button type="submit"
+                                  name="language"
+                                  value="{{ language.code }}"
+                                  class="{% if language.code == LANGUAGE_CODE %}selected{% endif %} hero__lang--self">
+                              {{ language.code }}
+                          </button>
+                  {% endfor %}
+              </ul>
+            </form>
+          </div>
+        </div>
+        <div class="hero__box">
+          <div class="hero__img">
+            <img src="http://127.0.0.1:8000/{{ boxer.boxer_rasmi }}" alt="" />
+          </div>
+          <div class="hero__contents">
+            
+
+            <div class="hero__content1">
+              <h4 class="hero__title">{{ boxer.fio }}</h4>
+            </div>
+            <div class="hero__cotent2">
+              <ul>
+              <li class="hero__info">
+                {% translate "total" %}: <span class="hero__detail">{{ boxer.umumiy_janglari_soni }}</span>
+                </li>
+                <li class="hero__info">
+                  {% translate "wins" %}: <span class="hero__detail">{{ boxer.yutganlari }}</span>
+                </li>
+                <li class="hero__info">
+                  {% translate "lose" %}: <span class="hero__detail">{{ boxer.yutqazganlari }}</span>
+                </li>
+                <li class="hero__info">
+                  {% translate "knockout" %}: <span class="hero__detail">{{ boxer.nokaut }}</span>
+                </li>
+                <li class="hero__info">
+                  {% translate "By submission" %}: <span class="hero__detail">{{ boxer.taqdim_etish_orqali }}</span>
+                </li>
+                <li class="hero__info">
+                  {% translate "decision" %}: <span class="hero__detail">{{ boxer.qaror }}</span>
+                </li>
+              </ul>
+            </div>
+            <div class="hero__cotent3">
+              <ul>
+                
+                <li class="hero__info">
+                  {% translate "trenerlar" %}:
+                  <ul>
+                    {% if boxer.trener_1 != 'None' %}
+                      <li>{{ boxer.trener_1 }}</li>
+                    {% endif %}
+                    {% if boxer.trener_2 != 'None' %}
+                      <li>{{ boxer.trener_2 }}</li>
+                    {% endif %}
+                    {% if boxer.trener_3 != 'None' %}
+                      <li>{{ boxer.trener_3 }}</li>
+                    {% endif %}
+                    {% if boxer.trener_4 != 'None' %}
+                      <li>{{ boxer.trener_4 }}</li>
+                    {% endif %}
+                    {% if boxer.trener_5 != 'None' %}
+                      <li>{{ boxer.trener_5 }}</li>
+                    {% endif %}
+                  </ul>
+                </li>
+                <li class="hero__info">
+                  {% translate "nomeri" %}: <span class="hero__detail">{{ boxer.nomeri }}</span>
+                </li>
+                <li class="hero__info">
+                  {% translate "address" %}: <span class="hero__detail">{{ boxer.turar_joyi }}</span>
+                </li>
+                <li class="hero__info">
+                  {% translate "darajasi" %}: <span class="hero__detail">yuqori</span>
+                </li>
+                <li class="hero__info">
+                  {% translate "viloyat" %}: <span class="hero__detail">{{ boxer.viloyat }}</span>
+                </li>
+              </ul>
+              <a href="http://127.0.0.1:8000/{{ boxer.passport_pdf }}" class="hero__btn" target="_blank">
+                <span>{% translate "passport_nusxasi" %}</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="{% static 'details/' %}js/bootstrap.min.js"></script>
+  </body>
+</html>

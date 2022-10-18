@@ -1,0 +1,136 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-09-16 14:46+0500\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=4; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
+"%10<=4 && (n%100<12 || n%100>14) ? 1 : n%10==0 || (n%10>=5 && n%10<=9) || (n"
+"%100>=11 && n%100<=14)? 2 : 3);\n"
+
+#: boxing_base/settings.py:137
+msgid "English"
+msgstr "Английский"
+
+#: boxing_base/settings.py:138
+msgid "Russian"
+msgstr "Русский"
+
+#: boxing_base/settings.py:139
+msgid "Uzbek"
+msgstr "узбекский"
+
+#: templates/admin_lte/data.html:8
+msgid "boxing_federation_app"
+msgstr "Федерация бокса"
+
+#: templates/admin_lte/data.html:56
+msgid "Dashboard"
+msgstr "Приборная доска"
+
+#: templates/admin_lte/data.html:64
+msgid "main_info_page"
+msgstr "Все боксеры"
+
+#: templates/admin_lte/data.html:70
+msgid "yangi_bokschi_qoshish"
+msgstr "Добавить нового боксера"
+
+#: templates/admin_lte/data.html:76
+msgid "bokschilar_ni_taxrirlash"
+msgstr "Изменить боксеры"
+
+#: templates/admin_lte/data.html:98
+msgid "bokschilarni_qidirish"
+msgstr "Поиск боксеров"
+
+#: templates/admin_lte/data.html:125
+msgid "regions"
+msgstr "Область"
+
+#: templates/admin_lte/data.html:135
+msgid "champion_unvoni"
+msgstr "Уровень чемпиона"
+
+#: templates/admin_lte/data.html:137
+msgid "tanlov"
+msgstr "Выбор"
+
+#: templates/admin_lte/data.html:158
+msgid "malumotlar"
+msgstr "Информация"
+
+#: templates/admin_lte/data.html:165 templates/admin_lte/data.html:180
+msgid "fio"
+msgstr "Фио"
+
+#: templates/admin_lte/data.html:166 templates/admin_lte/data.html:181
+#: templates/details/index.html:105
+msgid "nomeri"
+msgstr "Номер телефона"
+
+#: templates/details/index.html:62
+msgid "total"
+msgstr "Общий"
+
+#: templates/details/index.html:65
+msgid "wins"
+msgstr "Победы"
+
+#: templates/details/index.html:68
+msgid "lose"
+msgstr "Количество побед"
+
+#: templates/details/index.html:71
+msgid "knockout"
+msgstr "Побед нокаутом"
+
+#: templates/details/index.html:74
+msgid "By submission"
+msgstr "По представлению"
+
+#: templates/details/index.html:77
+msgid "decision"
+msgstr "Поражений"
+
+#: templates/details/index.html:85
+msgid "trenerlar"
+msgstr "Тренеры"
+
+#: templates/details/index.html:108
+msgid "address"
+msgstr "Адрес"
+
+#: templates/details/index.html:111
+msgid "darajasi"
+msgstr "Уровень"
+
+#: templates/details/index.html:114
+msgid "viloyat"
+msgstr "Область, край"
+
+#: templates/details/index.html:118
+msgid "passport_nusxasi"
+msgstr "Копия паспорта"
+
+#, fuzzy
+#~| msgid "Bokschilar_malumoti"
+#~ msgid "bokschilar_royxati"
+#~ msgstr "Информация о боксерах"
+
+#, fuzzy
+#~| msgid "viloyat"
+#~ msgid "viloyatlar"
+#~ msgstr "Область"

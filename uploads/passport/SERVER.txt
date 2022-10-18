@@ -1,0 +1,27 @@
+************************************************
+SERVER ROOT
+
+Admin ga otish a2hosting
+login: isaakahmedov@gmail.com
+parol: Ojc|4)7b}M2}
+
+************************************************
+
+ROOT SSH
+103.204.129.60
+root
+I!u#Z1VsXYd8
+
+************************************************
+
+PLESK
+
+https://103.204.129.60:8443/
+https://server.isaak.uz/
+admin
+pd3squ_akV12QXl^
+
+
+
+
+

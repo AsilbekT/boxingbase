@@ -1,0 +1,134 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-09-16 14:46+0500\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: boxing_base/settings.py:137
+msgid "English"
+msgstr "Ingliz"
+
+#: boxing_base/settings.py:138
+msgid "Russian"
+msgstr "Rus"
+
+#: boxing_base/settings.py:139
+msgid "Uzbek"
+msgstr "Uzbek"
+
+#: templates/admin_lte/data.html:8
+msgid "boxing_federation_app"
+msgstr "Box Federatsiasi"
+
+#: templates/admin_lte/data.html:56
+msgid "Dashboard"
+msgstr "Dashboard"
+
+#: templates/admin_lte/data.html:64
+msgid "main_info_page"
+msgstr "Hamma bokschilar"
+
+#: templates/admin_lte/data.html:70
+msgid "yangi_bokschi_qoshish"
+msgstr "Bokschi qo'shish"
+
+#: templates/admin_lte/data.html:76
+msgid "bokschilar_ni_taxrirlash"
+msgstr "Bokschilarni taxrirlash"
+
+#: templates/admin_lte/data.html:98
+msgid "bokschilarni_qidirish"
+msgstr "Bokschilarni qidirish"
+
+#: templates/admin_lte/data.html:125
+msgid "regions"
+msgstr "Viloyatlar"
+
+#: templates/admin_lte/data.html:135
+msgid "champion_unvoni"
+msgstr "Championing Unvoni"
+
+#: templates/admin_lte/data.html:137
+msgid "tanlov"
+msgstr "Tanlo'v"
+
+#: templates/admin_lte/data.html:158
+msgid "malumotlar"
+msgstr "Ma'lumotlar"
+
+#: templates/admin_lte/data.html:165 templates/admin_lte/data.html:180
+msgid "fio"
+msgstr "FIO"
+
+#: templates/admin_lte/data.html:166 templates/admin_lte/data.html:181
+#: templates/details/index.html:105
+msgid "nomeri"
+msgstr "Nomeri"
+
+#: templates/details/index.html:62
+msgid "total"
+msgstr "Umumiy"
+
+#: templates/details/index.html:65
+msgid "wins"
+msgstr "Yutganlari"
+
+#: templates/details/index.html:68
+msgid "lose"
+msgstr "Yutqazganlari"
+
+#: templates/details/index.html:71
+msgid "knockout"
+msgstr "Nokaut"
+
+#: templates/details/index.html:74
+msgid "By submission"
+msgstr "Taqdim etish orqali"
+
+#: templates/details/index.html:77
+msgid "decision"
+msgstr "Qaror"
+
+#: templates/details/index.html:85
+msgid "trenerlar"
+msgstr "Trenerlar"
+
+#: templates/details/index.html:108
+msgid "address"
+msgstr "Manzil"
+
+#: templates/details/index.html:111
+msgid "darajasi"
+msgstr "Darajasi"
+
+#: templates/details/index.html:114
+msgid "viloyat"
+msgstr "Viloyat"
+
+#: templates/details/index.html:118
+msgid "passport_nusxasi"
+msgstr "Passport nusxasi"
+
+#, fuzzy
+#~| msgid "Bokschilar_malumoti"
+#~ msgid "bokschilar_royxati"
+#~ msgstr "Bo'kschilar ro'yxati"
+
+#, fuzzy
+#~| msgid "viloyat"
+#~ msgid "viloyatlar"
+#~ msgstr "Viloyat"
