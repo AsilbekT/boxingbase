@@ -6,5 +6,6 @@ urlpatterns = [
     path('boxers_details/<int:id>/', views.boxers_details, name='boxers_details'),
     path("add_boxer/", views.add_boxer, name="add_boxer"),
     path("edit_boxer/<int:id>/", views.edit_boxer, name="edit_boxer"),
+    path("login/", views.login_page, name="login_page"),
     path("change_lang/", views.change_lang, name="change_lang"),
 ]

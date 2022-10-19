@@ -158,3 +158,19 @@ span {
     border: none;
   }
 }
+@media (max-width: 574px) {
+  .hero__lang {
+    display: block;
+  }
+  .hero__lang--form {
+    width: 100%;
+    margin-top: 20px;
+    justify-content: center;
+  }
+  .hero__previous {
+    justify-content: space-between;
+  }
+}
+
+
+

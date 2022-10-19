@@ -142,6 +142,14 @@ def add_boxer(request):
     context = {"form": form}
     return render(request, "details/form.html", context)
 
+
+def login_page(request):
+    context = {}
+    return render(request, "admin_lte/login.html", context)
+
+
+
+
 def change_lang(request):
     LANGUAGE_SESSION_KEY = '_language'
     if request.method == "POST":
