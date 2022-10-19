@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-09-16 14:46+0500\n"
+"POT-Creation-Date: 2022-10-19 02:13+0500\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -16,9 +16,9 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=4; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
-"%10<=4 && (n%100<12 || n%100>14) ? 1 : n%10==0 || (n%10>=5 && n%10<=9) || (n"
-"%100>=11 && n%100<=14)? 2 : 3);\n"
+"Plural-Forms: nplurals=4; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
+"n%10<=4 && (n%100<12 || n%100>14) ? 1 : n%10==0 || (n%10>=5 && n%10<=9) || "
+"(n%100>=11 && n%100<=14)? 2 : 3);\n"
 
 #: boxing_base/settings.py:137
 msgid "English"
@@ -36,50 +36,49 @@ msgstr "узбекский"
 msgid "boxing_federation_app"
 msgstr "Федерация бокса"
 
-#: templates/admin_lte/data.html:56
+#: templates/admin_lte/data.html:82
 msgid "Dashboard"
 msgstr "Приборная доска"
 
-#: templates/admin_lte/data.html:64
+#: templates/admin_lte/data.html:90
 msgid "main_info_page"
 msgstr "Все боксеры"
 
-#: templates/admin_lte/data.html:70
+#: templates/admin_lte/data.html:96
 msgid "yangi_bokschi_qoshish"
 msgstr "Добавить нового боксера"
 
-#: templates/admin_lte/data.html:76
-msgid "bokschilar_ni_taxrirlash"
-msgstr "Изменить боксеры"
-
-#: templates/admin_lte/data.html:98
+#: templates/admin_lte/data.html:126
 msgid "bokschilarni_qidirish"
 msgstr "Поиск боксеров"
 
-#: templates/admin_lte/data.html:125
-msgid "regions"
+#: templates/admin_lte/data.html:153 templates/details/index.html:114
+msgid "viloyat"
 msgstr "Область"
 
-#: templates/admin_lte/data.html:135
+#: templates/admin_lte/data.html:154 templates/admin_lte/data.html:182
+msgid "any"
+msgstr "Выбор"
+
+#: templates/admin_lte/data.html:169
 msgid "champion_unvoni"
 msgstr "Уровень чемпиона"
 
-#: templates/admin_lte/data.html:137
+#: templates/admin_lte/data.html:171
 msgid "tanlov"
 msgstr "Выбор"
 
-#: templates/admin_lte/data.html:158
-msgid "malumotlar"
-msgstr "Информация"
+#: templates/admin_lte/data.html:181
+msgid "different_weight"
+msgstr "Диапазоны веса"
 
-#: templates/admin_lte/data.html:165 templates/admin_lte/data.html:180
-msgid "fio"
-msgstr "Фио"
+#: templates/admin_lte/data.html:192
+msgid "type"
+msgstr "Поиск боксеров"
 
-#: templates/admin_lte/data.html:166 templates/admin_lte/data.html:181
-#: templates/details/index.html:105
-msgid "nomeri"
-msgstr "Номер телефона"
+#: templates/admin_lte/data.html:213
+msgid "boxers_list"
+msgstr "СПИСОК БОКСЕРОВ"
 
 #: templates/details/index.html:62
 msgid "total"
@@ -109,6 +108,10 @@ msgstr "Поражений"
 msgid "trenerlar"
 msgstr "Тренеры"
 
+#: templates/details/index.html:105
+msgid "nomeri"
+msgstr "Номер телефона"
+
 #: templates/details/index.html:108
 msgid "address"
 msgstr "Адрес"
@@ -117,13 +120,21 @@ msgstr "Адрес"
 msgid "darajasi"
 msgstr "Уровень"
 
-#: templates/details/index.html:114
-msgid "viloyat"
-msgstr "Область, край"
-
 #: templates/details/index.html:118
 msgid "passport_nusxasi"
 msgstr "Копия паспорта"
+
+#~ msgid "bokschilar_ni_taxrirlash"
+#~ msgstr "Изменить боксеры"
+
+#~ msgid "regions"
+#~ msgstr "Область"
+
+#~ msgid "malumotlar"
+#~ msgstr "Информация"
+
+#~ msgid "fio"
+#~ msgstr "Фио"
 
 #, fuzzy
 #~| msgid "Bokschilar_malumoti"

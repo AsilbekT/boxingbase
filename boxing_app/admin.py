@@ -6,3 +6,4 @@ admin.site.site_header = 'Boxing Federation'
 admin.site.register(Boxer)
 admin.site.register(Viloyatlar)
 admin.site.register(All_types_of_chempion)
+admin.site.register(Different_weight)

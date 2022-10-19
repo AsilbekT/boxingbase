@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-09-16 14:46+0500\n"
+"POT-Creation-Date: 2022-10-19 02:13+0500\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -34,50 +34,49 @@ msgstr "Uzbek"
 msgid "boxing_federation_app"
 msgstr "Box Federatsiasi"
 
-#: templates/admin_lte/data.html:56
+#: templates/admin_lte/data.html:82
 msgid "Dashboard"
 msgstr "Dashboard"
 
-#: templates/admin_lte/data.html:64
+#: templates/admin_lte/data.html:90
 msgid "main_info_page"
 msgstr "Hamma bokschilar"
 
-#: templates/admin_lte/data.html:70
+#: templates/admin_lte/data.html:96
 msgid "yangi_bokschi_qoshish"
 msgstr "Bokschi qo'shish"
 
-#: templates/admin_lte/data.html:76
-msgid "bokschilar_ni_taxrirlash"
-msgstr "Bokschilarni taxrirlash"
-
-#: templates/admin_lte/data.html:98
+#: templates/admin_lte/data.html:126
 msgid "bokschilarni_qidirish"
 msgstr "Bokschilarni qidirish"
 
-#: templates/admin_lte/data.html:125
-msgid "regions"
-msgstr "Viloyatlar"
+#: templates/admin_lte/data.html:153 templates/details/index.html:114
+msgid "viloyat"
+msgstr "Viloyat"
 
-#: templates/admin_lte/data.html:135
+#: templates/admin_lte/data.html:154 templates/admin_lte/data.html:182
+msgid "any"
+msgstr "Tanvol"
+
+#: templates/admin_lte/data.html:169
 msgid "champion_unvoni"
 msgstr "Championing Unvoni"
 
-#: templates/admin_lte/data.html:137
+#: templates/admin_lte/data.html:171
 msgid "tanlov"
 msgstr "Tanlo'v"
 
-#: templates/admin_lte/data.html:158
-msgid "malumotlar"
-msgstr "Ma'lumotlar"
+#: templates/admin_lte/data.html:181
+msgid "different_weight"
+msgstr "Og'irlik diapazonlari"
 
-#: templates/admin_lte/data.html:165 templates/admin_lte/data.html:180
-msgid "fio"
-msgstr "FIO"
+#: templates/admin_lte/data.html:192
+msgid "type"
+msgstr "Bokschilarni qidirish"
 
-#: templates/admin_lte/data.html:166 templates/admin_lte/data.html:181
-#: templates/details/index.html:105
-msgid "nomeri"
-msgstr "Nomeri"
+#: templates/admin_lte/data.html:213
+msgid "boxers_list"
+msgstr "BOKSCHILARNING RO'YXATI"
 
 #: templates/details/index.html:62
 msgid "total"
@@ -107,6 +106,10 @@ msgstr "Qaror"
 msgid "trenerlar"
 msgstr "Trenerlar"
 
+#: templates/details/index.html:105
+msgid "nomeri"
+msgstr "Nomeri"
+
 #: templates/details/index.html:108
 msgid "address"
 msgstr "Manzil"
@@ -115,13 +118,21 @@ msgstr "Manzil"
 msgid "darajasi"
 msgstr "Darajasi"
 
-#: templates/details/index.html:114
-msgid "viloyat"
-msgstr "Viloyat"
-
 #: templates/details/index.html:118
 msgid "passport_nusxasi"
 msgstr "Passport nusxasi"
+
+#~ msgid "bokschilar_ni_taxrirlash"
+#~ msgstr "Bokschilarni taxrirlash"
+
+#~ msgid "regions"
+#~ msgstr "Viloyatlar"
+
+#~ msgid "malumotlar"
+#~ msgstr "Ma'lumotlar"
+
+#~ msgid "fio"
+#~ msgstr "FIO"
 
 #, fuzzy
 #~| msgid "Bokschilar_malumoti"

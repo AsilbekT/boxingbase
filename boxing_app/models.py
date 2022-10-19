@@ -21,6 +21,13 @@ class All_types_of_chempion(models.Model):
     def __str__(self):
         return self.type_uz
 
+class Different_weight(models.Model):
+    weight_start = models.IntegerField()
+    weight_end = models.IntegerField()
+
+    def __str__(self):
+        return str(self.weight_start) + "-" + str(self.weight_end)
+
 
 class Boxer(models.Model):
     fio = models.CharField(max_length=200)
@@ -32,6 +39,7 @@ class Boxer(models.Model):
     nokaut = models.CharField(max_length=200, default='')
     taqdim_etish_orqali = models.CharField(max_length=200, default='')
     qaror = models.CharField(max_length=200, default='')
+    vazni = models.IntegerField(default=0)
     viloyat = models.ForeignKey(Viloyatlar, on_delete=models.CASCADE)
     unvoni = models.ForeignKey(All_types_of_chempion, null=True, blank=True, on_delete=models.CASCADE)
     trener_1 = models.CharField(max_length=200, default='None')
