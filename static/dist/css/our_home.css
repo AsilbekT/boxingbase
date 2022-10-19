@@ -21,7 +21,7 @@
   }
   
   .content__hero {
-    text-transform: uppercase;
+    text-transform: capitalize;
     font-weight: bold;
     color: #343434;
     margin-right: 30px;

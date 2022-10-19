@@ -32,11 +32,7 @@
           <i class="fas fa-expand-arrows-alt"></i>
         </a>
       </li>
-      <li class="nav-item">
-        <a class="nav-link" data-widget="control-sidebar" data-slide="true" href="#" role="button">
-          <i class="fas fa-th-large"></i>
-        </a>
-      </li>
+
     </ul>
   </nav>
 
@@ -146,7 +142,7 @@
           
                           <div class="col-6 col-md-3">
                             <div class="form-group">
-                              <label>{% translate "different_weight" %} (kg):</label>
+                              <label>{% translate "different_weight" %} ({% translate "kg" %}):</label>
                                 {% comment %} <select class="select2" name="weight" multiple="multiple" data-placeholder="{% translate "any" %}" style="width: 100%;">
                                   {% for i in weights %}
                                     <option>{{ i.weight_start }}-{{ i.weight_end }}</option>
@@ -219,15 +215,7 @@
                       </tr>
                     {% endfor %}
                   </tbody>
-                  <tfoot>
-                      <tr>
-                        <th>{% translate "fio" %}</th>
-                        <th>{% translate "nomeri" %}</th>
-                        <th>{% translate "vazni" %}</th>
-                        <th>{% translate "viloyat" %}</th>
-                        <th>{% translate "unvoni" %}</th>
-                      </tr>
-                  </tfoot>
+          
                 </table>
               </div>
               <!-- /.card-body -->

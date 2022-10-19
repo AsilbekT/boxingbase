@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-10-19 02:13+0500\n"
+"POT-Creation-Date: 2022-10-20 01:28+0500\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -30,53 +30,75 @@ msgstr "Russian"
 msgid "Uzbek"
 msgstr "Uzbek"
 
-#: templates/admin_lte/data.html:8
+#: templates/admin_lte/data.html:9
 msgid "boxing_federation_app"
 msgstr "Boxing Federation app"
 
-#: templates/admin_lte/data.html:82
+#: templates/admin_lte/data.html:62
 msgid "Dashboard"
 msgstr "Dashboard"
 
-#: templates/admin_lte/data.html:90
+#: templates/admin_lte/data.html:70
 msgid "main_info_page"
 msgstr "All boxers"
 
-#: templates/admin_lte/data.html:96
+#: templates/admin_lte/data.html:76
 msgid "yangi_bokschi_qoshish"
 msgstr "Add new boxers"
 
-#: templates/admin_lte/data.html:126
+#: templates/admin_lte/data.html:94
 msgid "bokschilarni_qidirish"
 msgstr "Search boxers"
 
-#: templates/admin_lte/data.html:153 templates/details/index.html:114
+#: templates/admin_lte/data.html:121 templates/admin_lte/data.html:196
+#: templates/admin_lte/data.html:228 templates/details/index.html:114
 msgid "viloyat"
 msgstr "Region"
 
-#: templates/admin_lte/data.html:154 templates/admin_lte/data.html:182
+#: templates/admin_lte/data.html:122
 msgid "any"
 msgstr "Choice"
 
-#: templates/admin_lte/data.html:169
+#: templates/admin_lte/data.html:137
 msgid "champion_unvoni"
 msgstr "Level of Champions"
 
-#: templates/admin_lte/data.html:171
+#: templates/admin_lte/data.html:139 templates/admin_lte/data.html:157
 msgid "tanlov"
 msgstr "Choice"
 
-#: templates/admin_lte/data.html:181
+#: templates/admin_lte/data.html:149
 msgid "different_weight"
 msgstr "Weight ranges"
 
-#: templates/admin_lte/data.html:192
+#: templates/admin_lte/data.html:149
+msgid "kg"
+msgstr "kg"
+
+#: templates/admin_lte/data.html:167
 msgid "type"
 msgstr "Search boxers"
 
-#: templates/admin_lte/data.html:213
+#: templates/admin_lte/data.html:187
 msgid "boxers_list"
 msgstr "BOXERS' LIST"
+
+#: templates/admin_lte/data.html:193 templates/admin_lte/data.html:225
+msgid "fio"
+msgstr "FIO"
+
+#: templates/admin_lte/data.html:194 templates/admin_lte/data.html:226
+#: templates/details/index.html:105
+msgid "nomeri"
+msgstr "Number"
+
+#: templates/admin_lte/data.html:195 templates/admin_lte/data.html:227
+msgid "vazni"
+msgstr "Weight"
+
+#: templates/admin_lte/data.html:197 templates/admin_lte/data.html:229
+msgid "unvoni"
+msgstr "Level"
 
 #: templates/details/index.html:62
 msgid "total"
@@ -106,10 +128,6 @@ msgstr "Decision"
 msgid "trenerlar"
 msgstr "Trainers"
 
-#: templates/details/index.html:105
-msgid "nomeri"
-msgstr "Number"
-
 #: templates/details/index.html:108
 msgid "address"
 msgstr "Address"
@@ -118,7 +136,7 @@ msgstr "Address"
 msgid "darajasi"
 msgstr "Level"
 
-#: templates/details/index.html:118
+#: templates/details/index.html:119
 msgid "passport_nusxasi"
 msgstr "Passport copy"
 
@@ -130,9 +148,6 @@ msgstr "Passport copy"
 
 #~ msgid "malumotlar"
 #~ msgstr "Information"
-
-#~ msgid "fio"
-#~ msgstr "FIO"
 
 #, fuzzy
 #~| msgid "Bokschilar_malumoti"

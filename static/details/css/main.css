@@ -170,6 +170,16 @@ span {
   .hero__previous {
     justify-content: space-between;
   }
+  .hero__cotent3 {
+    position: unset;
+    display: block;
+  }
+}
+@media (max-width: 414px) {
+  .hero__btn {
+    position: relative;
+    margin-left: 20px;
+  }
 }
 
 
